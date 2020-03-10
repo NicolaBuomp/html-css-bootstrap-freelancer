@@ -5,6 +5,13 @@ header{
 }
 
 /* utility */
+.b-star, .w-star{
+  font-size: 25px;
+}
+
+.b-star{
+  padding-bottom: 30px;
+}
 
 .w-star:before, .w-star:after,
 .b-star:before, .b-star:after {
@@ -14,14 +21,11 @@ header{
   height: 4px;
   vertical-align: middle;
   background-color: #fff;
+
 }
 
 .b-star:before, .b-star:after{
   background-color: #000;
-}
-
-.b-star{
-  padding-bottom: 30px;
 }
 
 /* NAVBAR */
@@ -30,15 +34,20 @@ header .navbar{
   border: none;
   border-radius: 0px;
 }
+
 .navbar-default .navbar-brand,
 .navbar-default .navbar-toggle,
 .navbar-default .navbar-nav>li>a{
   color: #fff;
 }
 
-.navbar-default .navbar-brand,
-.navbar-default .navbar-toggle,
+.navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover{
+  color: #1abc9c;
+}
+
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover{
   color: #1abc9c;
 }
 
@@ -50,7 +59,7 @@ header .navbar{
 /* PORTFOLIO */
 
 #portfolio{
-  padding: 30px 0;
+  padding: 30px 15px;
 }
 
 .portfolio_item {
@@ -64,6 +73,23 @@ header .navbar{
   max-width: 100%;
 }
 
+.portfolio_item i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display:none;
+  font-size: 70px;
+  color: #fff;
+}
+
+.portfolio_item a:hover{
+  background-color: rgba(26, 188, 156, 0.7);
+}
+
+.portfolio_item a:hover  i {
+  display: inline;
+}
 /* ABOUT */
 
 #about{
@@ -78,10 +104,15 @@ header .navbar{
   border-color: #f3fcfa;
 }
 
+.btn-success:active:focus,
+.btn-success:active:hover,
+.btn-success:focus,
 .btn-success:hover {
   background-color: #1abc9c;
   border-color: #f3fcfa;
 }
+
+
 
 #about .w-star{
   padding-bottom: 20px;
@@ -89,8 +120,7 @@ header .navbar{
 
 .text_p{
   font-size: 20px;
-  width: 400px;
-  padding:0 20px 20px;
+  max-width: 100%;
 }
 /* CONTACT */
 
@@ -113,6 +143,12 @@ header .navbar{
   background-color: #1abc9c;
 }
 
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: none;
+}
+
 /* FOOTER */
 
 #footer_one{
@@ -128,6 +164,7 @@ header .navbar{
   border-radius: 50%;
   border: 1px solid #fff;
   font-size: 20px;
+  color: #fff;
 }
 
 #footer_two{
